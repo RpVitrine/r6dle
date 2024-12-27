@@ -60,7 +60,8 @@ fun Application.configureRouting() {
         get("/api/random-operator") {
             // Verifica se o referer está presente e se é válido (localhost)
             val referer = call.request.headers[HttpHeaders.Referrer]
-            if (referer == null || !referer.startsWith("http://localhost")) {
+            if (referer == null ||
+                !(referer.startsWith("http://localhost") || referer.startsWith("http://127.0.0.1"))) {
                 call.respond(HttpStatusCode.Forbidden, "{\"error\":\"Access denied. Invalid or missing Referer.\"}")
                 return@get
             }
@@ -78,7 +79,8 @@ fun Application.configureRouting() {
         get("/api/all-operator-name") {
             // Verifica se o referer está presente e se é válido (localhost)
             val referer = call.request.headers[HttpHeaders.Referrer]
-            if (referer == null || !referer.startsWith("http://localhost")) {
+            if (referer == null ||
+                !(referer.startsWith("http://localhost") || referer.startsWith("http://127.0.0.1"))) {
                 call.respond(HttpStatusCode.Forbidden, "{\"error\":\"Access denied. Invalid or missing Referer.\"}")
                 return@get
             }
@@ -97,7 +99,8 @@ fun Application.configureRouting() {
         get("/api/restart-game"){
             // Verifica se o referer está presente e se é válido (localhost)
             val referer = call.request.headers[HttpHeaders.Referrer]
-            if (referer == null || !referer.startsWith("http://localhost")) {
+            if (referer == null ||
+                !(referer.startsWith("http://localhost") || referer.startsWith("http://127.0.0.1"))) {
                 call.respond(HttpStatusCode.Forbidden, "{\"error\":\"Access denied. Invalid or missing Referer.\"}")
                 return@get
             }
@@ -109,7 +112,8 @@ fun Application.configureRouting() {
         get("/api/validate-all-fields") {
             // Verifica se o referer está presente e se é válido (localhost)
             val referer = call.request.headers[HttpHeaders.Referrer]
-            if (referer == null || !referer.startsWith("http://localhost")) {
+            if (referer == null ||
+                !(referer.startsWith("http://localhost") || referer.startsWith("http://127.0.0.1"))) {
                 call.respond(HttpStatusCode.Forbidden, "{\"error\":\"Access denied. Invalid or missing Referer.\"}")
                 return@get
             }

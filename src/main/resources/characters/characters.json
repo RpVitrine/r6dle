@@ -9,8 +9,8 @@
     ],
     "side": "Attack",
     "country": "Scotland",
-    "Org": "SAS",
-    "Squad": "Redhammer",
+    "org": "SAS",
+    "squad": "Redhammer",
     "release_year": "2015"
   },
   {
@@ -23,8 +23,8 @@
     ],
     "side": "Attack",
     "country": "England",
-    "Org": "SAS",
-    "Squad": "Viperstrike",
+    "org": "SAS",
+    "squad": "Viperstrike",
     "release_year": "2015"
   },
   {
@@ -37,8 +37,8 @@
     ],
     "side": "Attack",
     "country": "Israel",
-    "Org": "FBI SWAT",
-    "Squad": "Redhammer",
+    "org": "FBI SWAT",
+    "squad": "Redhammer",
     "release_year": "2015"
   },
   {
@@ -51,8 +51,8 @@
     ],
     "side": "Attack",
     "country": "USA",
-    "Org": "FBI SWAT",
-    "Squad": "Redhammer",
+    "org": "FBI SWAT",
+    "squad": "Redhammer",
     "release_year": "2015"
   },
   {
@@ -65,8 +65,8 @@
     ],
     "side": "Attack",
     "country": "France",
-    "Org": "GIGN",
-    "Squad": "Wolfguard",
+    "org": "GIGN",
+    "squad": "Wolfguard",
     "release_year": "2015"
   },
   {
@@ -79,8 +79,8 @@
     ],
     "side": "Attack",
     "country": "France",
-    "Org": "GIGN",
-    "Squad": "Wolfguard",
+    "org": "GIGN",
+    "squad": "Wolfguard",
     "release_year": "2015"
   },
   {
@@ -93,8 +93,8 @@
     ],
     "side": "Attack",
     "country": "Russia",
-    "Org": "Spetsnaz",
-    "Squad": "Ghosteyes",
+    "org": "Spetsnaz",
+    "squad": "Ghosteyes",
     "release_year": "2015"
   },
   {
@@ -106,8 +106,8 @@
     ],
     "side": "Attack",
     "country": "Uzbekistan",
-    "Org": "Spetsnaz",
-    "Squad": "Redhammer",
+    "org": "Spetsnaz",
+    "squad": "Redhammer",
     "release_year": "2015"
   },
   {
@@ -120,8 +120,8 @@
     ],
     "side": "Attack",
     "country": "Germany",
-    "Org": "GSG 9",
-    "Squad": "Viperstrike",
+    "org": "GSG 9",
+    "squad": "Viperstrike",
     "release_year": "2015"
   },
   {
@@ -134,8 +134,8 @@
     ],
     "side": "Attack",
     "country": "Germany",
-    "Org": "GSG 9",
-    "Squad": "Nighthaven",
+    "org": "GSG 9",
+    "squad": "Nighthaven",
     "release_year": "2015"
   },
   {
@@ -148,8 +148,8 @@
     ],
     "side": "Attack",
     "country": "Canada",
-    "Org": "JTF2",
-    "Squad": "Redhammer",
+    "org": "JTF2",
+    "squad": "Redhammer",
     "release_year": "2016"
   },
   {
@@ -161,8 +161,8 @@
     ],
     "side": "Attack",
     "country": "USA",
-    "Org": "NAVY SEAL",
-    "Squad": "Redhammer",
+    "org": "NAVY SEAL",
+    "squad": "Redhammer",
     "release_year": "2016"
   },
   {
@@ -175,8 +175,8 @@
     ],
     "side": "Attack",
     "country": "Brazil",
-    "Org": "BOPE",
-    "Squad": "Viperstrike",
+    "org": "BOPE",
+    "squad": "Viperstrike",
     "release_year": "2016"
   },
   {
@@ -189,8 +189,8 @@
     ],
     "side": "Attack",
     "country": "Japan",
-    "Org": "SAT",
-    "Squad": "Viperstrike",
+    "org": "SAT",
+    "squad": "Viperstrike",
     "release_year": "2016"
   },
   {
@@ -203,8 +203,8 @@
     ],
     "side": "Attack",
     "country": "Spain",
-    "Org": "GEO",
-    "Squad": "Viperstrike",
+    "org": "GEO",
+    "squad": "Viperstrike",
     "release_year": "2017"
   },
   {
@@ -217,8 +217,8 @@
     ],
     "side": "Attack",
     "country": "Hong Kong",
-    "Org": "SDU",
-    "Squad": "Wolfguard",
+    "org": "SDU",
+    "squad": "Wolfguard",
     "release_year": "2017"
   },
   {
@@ -231,8 +231,8 @@
     ],
     "side": "Attack",
     "country": "Poland",
-    "Org": "GROM",
-    "Squad": "Ghosteyes",
+    "org": "GROM",
+    "squad": "Ghosteyes",
     "release_year": "2017"
   },
   {
@@ -245,8 +245,8 @@
     ],
     "side": "Attack",
     "country": "South Korea",
-    "Org": "707th SMB",
-    "Squad": "Viperstrike",
+    "org": "707th SMB",
+    "squad": "Viperstrike",
     "release_year": "2017"
   },
   {
@@ -259,8 +259,8 @@
     ],
     "side": "Attack",
     "country": "France",
-    "Org": "GBRN Threat Unit",
-    "Squad": "Wolfguard",
+    "org": "GBRN Threat Unit",
+    "squad": "Wolfguard",
     "release_year": "2018"
   },
   {
@@ -273,8 +273,8 @@
     ],
     "side": "Attack",
     "country": "Belarus",
-    "Org": "GBRN Threat Unit",
-    "Squad": "Nighthaven",
+    "org": "GBRN Threat Unit",
+    "squad": "Nighthaven",
     "release_year": "2018"
   },
   {
@@ -287,8 +287,8 @@
     ],
     "side": "Attack",
     "country": "USA",
-    "Org": "GSUTR",
-    "Squad": "Ghosteyes",
+    "org": "GSUTR",
+    "squad": "Ghosteyes",
     "release_year": "2018"
   },
   {
@@ -301,8 +301,8 @@
     ],
     "side": "Attack",
     "country": "Morocco",
-    "Org": "GIGR",
-    "Squad": "Wolfguard",
+    "org": "GIGR",
+    "squad": "Wolfguard",
     "release_year": "2018"
   },
   {
@@ -315,8 +315,8 @@
     ],
     "side": "Attack",
     "country": "Australia",
-    "Org": "SASR",
-    "Squad": "Redhammer",
+    "org": "SASR",
+    "squad": "Redhammer",
     "release_year": "2019"
   },
   {
@@ -329,8 +329,8 @@
     ],
     "side": "Attack",
     "country": "Redacted",
-    "Org": "Jaeger Corps",
-    "Squad": "Ghosteyes",
+    "org": "Jaeger Corps",
+    "squad": "Ghosteyes",
     "release_year": "2019"
   },
   {
@@ -343,8 +343,8 @@
     ],
     "side": "Attack",
     "country": "Peru",
-    "Org": "APCA",
-    "Squad": "Redhammer",
+    "org": "APCA",
+    "squad": "Redhammer",
     "release_year": "2019"
   },
   {
@@ -357,8 +357,8 @@
     ],
     "side": "Attack",
     "country": "India",
-    "Org": "Nighthaven",
-    "Squad": "Nighthaven",
+    "org": "Nighthaven",
+    "squad": "Nighthaven",
     "release_year": "2019"
   },
   {
@@ -371,8 +371,8 @@
     ],
     "side": "Attack",
     "country": "Netherlands",
-    "Org": "REU",
-    "Squad": "Ghosteyes",
+    "org": "REU",
+    "squad": "Ghosteyes",
     "release_year": "2020"
   },
   {
@@ -385,8 +385,8 @@
     ],
     "side": "Attack",
     "country": "Norway",
-    "Org": "Nighthaven",
-    "Squad": "Nighthaven",
+    "org": "Nighthaven",
+    "squad": "Nighthaven",
     "release_year": "2020"
   },
   {
@@ -399,8 +399,8 @@
     ],
     "side": "Attack",
     "country": "USA",
-    "Org": "ROS",
-    "Squad": "Ghosteyes",
+    "org": "ROS",
+    "squad": "Ghosteyes",
     "release_year": "2020"
   },
   {
@@ -413,8 +413,8 @@
     ],
     "side": "Attack",
     "country": "Argentina",
-    "Org": "Unaffiliated",
-    "Squad": "Ghosteyes",
+    "org": "Unaffiliated",
+    "squad": "Ghosteyes",
     "release_year": "2021"
   },
   {
@@ -427,8 +427,8 @@
     ],
     "side": "Attack",
     "country": "Croatia",
-    "Org": "Nighthaven",
-    "Squad": "Nighthaven",
+    "org": "Nighthaven",
+    "squad": "Nighthaven",
     "release_year": "2021"
   },
   {
@@ -441,8 +441,8 @@
     ],
     "side": "Attack",
     "country": "Belgium",
-    "Org": "SFG",
-    "Squad": "Wolfguard",
+    "org": "SFG",
+    "squad": "Wolfguard",
     "release_year": "2022"
   },
   {
@@ -455,8 +455,8 @@
     ],
     "side": "Attack",
     "country": "Singapore",
-    "Org": "Nighthaven",
-    "Squad": "Nighthaven",
+    "org": "Nighthaven",
+    "squad": "Nighthaven",
     "release_year": "2022"
   },
   {
@@ -469,8 +469,8 @@
     ],
     "side": "Attack",
     "country": "Brazil",
-    "Org": "COT",
-    "Squad": "Viperstrike",
+    "org": "COT",
+    "squad": "Viperstrike",
     "release_year": "2023"
   },
   {
@@ -483,8 +483,8 @@
     ],
     "side": "Attack",
     "country": "South Korea",
-    "Org": "35TH Commando Battalion",
-    "Squad": "Redhammer",
+    "org": "35TH Commando Battalion",
+    "squad": "Redhammer",
     "release_year": "2023"
   },
   {
@@ -497,8 +497,8 @@
     ],
     "side": "Defence",
     "country": "England",
-    "Org": "SAS",
-    "Squad": "Nighthaven",
+    "org": "SAS",
+    "squad": "Nighthaven",
     "release_year": "2015"
   },
   {
@@ -511,8 +511,8 @@
     ],
     "side": "Defence",
     "country": "England",
-    "Org": "SAS",
-    "Squad": "Viperstrike",
+    "org": "SAS",
+    "squad": "Viperstrike",
     "release_year": "2015"
   },
   {
@@ -525,8 +525,8 @@
     ],
     "side": "Defence",
     "country": "USA",
-    "Org": "FBI SWAT",
-    "Squad": "Wolfguard",
+    "org": "FBI SWAT",
+    "squad": "Wolfguard",
     "release_year": "2015"
   },
   {
@@ -539,8 +539,8 @@
     ],
     "side": "Defence",
     "country": "USA",
-    "Org": "FBI SWAT",
-    "Squad": "Nighthaven",
+    "org": "FBI SWAT",
+    "squad": "Nighthaven",
     "release_year": "2015"
   },
   {
@@ -552,8 +552,8 @@
     ],
     "side": "Defence",
     "country": "France",
-    "Org": "GIGN",
-    "Squad": "Wolfguard",
+    "org": "GIGN",
+    "squad": "Wolfguard",
     "release_year": "2015"
   },
   {
@@ -565,8 +565,8 @@
     ],
     "side": "Defence",
     "country": "France",
-    "Org": "GIGN",
-    "Squad": "Viperstrike",
+    "org": "GIGN",
+    "squad": "Viperstrike",
     "release_year": "2015"
   },
   {
@@ -579,8 +579,8 @@
     ],
     "side": "Defence",
     "country": "Russia",
-    "Org": "Spetsnaz",
-    "Squad": "Redhammer",
+    "org": "Spetsnaz",
+    "squad": "Redhammer",
     "release_year": "2015"
   },
   {
@@ -593,8 +593,8 @@
     ],
     "side": "Defence",
     "country": "Russia",
-    "Org": "Spetsnaz",
-    "Squad": "Redhammer",
+    "org": "Spetsnaz",
+    "squad": "Redhammer",
     "release_year": "2015"
   },
   {
@@ -607,8 +607,8 @@
     ],
     "side": "Defence",
     "country": "Germany",
-    "Org": "GSG 9",
-    "Squad": "Viperstrike",
+    "org": "GSG 9",
+    "squad": "Viperstrike",
     "release_year": "2015"
   },
   {
@@ -621,8 +621,8 @@
     ],
     "side": "Defence",
     "country": "Germany",
-    "Org": "GSG 9",
-    "Squad": "Wolfguard",
+    "org": "GSG 9",
+    "squad": "Wolfguard",
     "release_year": "2015"
   },
   {
@@ -635,8 +635,8 @@
     ],
     "side": "Defence",
     "country": "Canada",
-    "Org": "JTF2",
-    "Squad": "Wolfguard",
+    "org": "JTF2",
+    "squad": "Wolfguard",
     "release_year": "2016"
   },
   {
@@ -649,8 +649,8 @@
     ],
     "side": "Defence",
     "country": "USA",
-    "Org": "NAVY SEAL",
-    "Squad": "Ghosteyes",
+    "org": "NAVY SEAL",
+    "squad": "Ghosteyes",
     "release_year": "2016"
   },
   {
@@ -663,8 +663,8 @@
     ],
     "side": "Defence",
     "country": "Brazil",
-    "Org": "BOPE",
-    "Squad": "Ghosteyes",
+    "org": "BOPE",
+    "squad": "Ghosteyes",
     "release_year": "2016"
   },
   {
@@ -677,8 +677,8 @@
     ],
     "side": "Defence",
     "country": "Japan",
-    "Org": "SAT",
-    "Squad": "Viperstrike",
+    "org": "SAT",
+    "squad": "Viperstrike",
     "release_year": "2016"
   },
   {
@@ -691,8 +691,8 @@
     ],
     "side": "Defence",
     "country": "Spain",
-    "Org": "GEO",
-    "Squad": "Viperstrike",
+    "org": "GEO",
+    "squad": "Viperstrike",
     "release_year": "2017"
   },
   {
@@ -705,8 +705,8 @@
     ],
     "side": "Defence",
     "country": "Hong Kong",
-    "Org": "SDU",
-    "Squad": "Ghosteyes",
+    "org": "SDU",
+    "squad": "Ghosteyes",
     "release_year": "2017"
   },
   {
@@ -719,8 +719,8 @@
     ],
     "side": "Defence",
     "country": "Poland",
-    "Org": "GROM",
-    "Squad": "Nighthaven",
+    "org": "GROM",
+    "squad": "Nighthaven",
     "release_year": "2017"
   },
   {
@@ -733,8 +733,8 @@
     ],
     "side": "Defence",
     "country": "Redacted",
-    "Org": "707th SMB",
-    "Squad": "Ghosteyes",
+    "org": "707th SMB",
+    "squad": "Ghosteyes",
     "release_year": "2017"
   },
   {
@@ -747,8 +747,8 @@
     ],
     "side": "Defence",
     "country": "Italy",
-    "Org": "GIS",
-    "Squad": "Viperstrike",
+    "org": "GIS",
+    "squad": "Viperstrike",
     "release_year": "2018"
   },
   {
@@ -761,8 +761,8 @@
     ],
     "side": "Defence",
     "country": "Libya",
-    "Org": "GIS",
-    "Squad": "Viperstrike",
+    "org": "GIS",
+    "squad": "Viperstrike",
     "release_year": "2018"
   },
   {
@@ -775,8 +775,8 @@
     ],
     "side": "Defence",
     "country": "England",
-    "Org": "GSUTR",
-    "Squad": "Wolfguard",
+    "org": "GSUTR",
+    "squad": "Wolfguard",
     "release_year": "2018"
   },
   {
@@ -789,8 +789,8 @@
     ],
     "side": "Defence",
     "country": "Morocco",
-    "Org": "GIGR",
-    "Squad": "Redhammer",
+    "org": "GIGR",
+    "squad": "Redhammer",
     "release_year": "2018"
   },
   {
@@ -803,8 +803,8 @@
     ],
     "side": "Defence",
     "country": "Australia",
-    "Org": "SASR",
-    "Squad": "Ghosteyes",
+    "org": "SASR",
+    "squad": "Ghosteyes",
     "release_year": "2019"
   },
   {
@@ -817,8 +817,8 @@
     ],
     "side": "Defence",
     "country": "USA",
-    "Org": "Secret Service",
-    "Squad": "Ghosteyes",
+    "org": "Secret Service",
+    "squad": "Ghosteyes",
     "release_year": "2019"
   },
   {
@@ -831,8 +831,8 @@
     ],
     "side": "Defence",
     "country": "Mexico",
-    "Org": "Fuerzas Especiales",
-    "Squad": "Redhammer",
+    "org": "Fuerzas Especiales",
+    "squad": "Redhammer",
     "release_year": "2019"
   },
   {
@@ -845,8 +845,8 @@
     ],
     "side": "Defence",
     "country": "Kenya",
-    "Org": "Nighthaven",
-    "Squad": "Nighthaven",
+    "org": "Nighthaven",
+    "squad": "Nighthaven",
     "release_year": "2019"
   },
   {
@@ -858,8 +858,8 @@
     ],
     "side": "Defence",
     "country": "Jordan",
-    "Org": "Unaffiliated",
-    "Squad": "Redhammer",
+    "org": "Unaffiliated",
+    "squad": "Redhammer",
     "release_year": "2020"
   },
   {
@@ -872,8 +872,8 @@
     ],
     "side": "Defence",
     "country": "South Africa",
-    "Org": "Inkaba Task Force",
-    "Squad": "Wolfguard",
+    "org": "Inkaba Task Force",
+    "squad": "Wolfguard",
     "release_year": "2020"
   },
   {
@@ -886,8 +886,8 @@
     ],
     "side": "Defence",
     "country": "Thailand",
-    "Org": "Nighthaven",
-    "Squad": "Nighthaven",
+    "org": "Nighthaven",
+    "squad": "Nighthaven",
     "release_year": "2020"
   },
   {
@@ -899,8 +899,8 @@
     ],
     "side": "Defence",
     "country": "Canada",
-    "Org": "Star-Net Aviation",
-    "Squad": "Wolfguard",
+    "org": "Star-Net Aviation",
+    "squad": "Wolfguard",
     "release_year": "2021"
   },
   {
@@ -913,8 +913,8 @@
     ],
     "side": "Defence",
     "country": "Ireland",
-    "Org": "Emergancy Response Unit",
-    "Squad": "Redhammer",
+    "org": "Emergancy Response Unit",
+    "squad": "Redhammer",
     "release_year": "2021"
   },
   {
@@ -927,8 +927,8 @@
     ],
     "side": "Defence",
     "country": "Japan",
-    "Org": "Unaffiliated",
-    "Squad": "Viperstrike",
+    "org": "Unaffiliated",
+    "squad": "Viperstrike",
     "release_year": "2022"
   },
   {
@@ -941,8 +941,8 @@
     ],
     "side": "Defence",
     "country": "Colombia",
-    "Org": "AFEAU",
-    "Squad": "Ghosteyes",
+    "org": "AFEAU",
+    "squad": "Ghosteyes",
     "release_year": "2022"
   },
   {
@@ -955,8 +955,8 @@
     ],
     "side": "Defence",
     "country": "Sweden",
-    "Org": "Unaffiliated",
-    "Squad": "Redhammer",
+    "org": "Unaffiliated",
+    "squad": "Redhammer",
     "release_year": "2023"
   },
   {
@@ -969,8 +969,8 @@
     ],
     "side": "Defence",
     "country": "Portugal",
-    "Org": "DAE",
-    "Squad": "Wolfguard",
+    "org": "DAE",
+    "squad": "Wolfguard",
     "release_year": "2023"
   },
   {
@@ -983,8 +983,8 @@
     ],
     "side": "Attack",
     "country": "USA",
-    "Org": "Keres Legion",
-    "Squad": "Not in a Squad",
+    "org": "Keres Legion",
+    "squad": "Not in a squad",
     "release_year": "2024"
   },
   {
@@ -996,8 +996,8 @@
     ],
     "side": "Attack",
     "country": "Undefined",
-    "Org": "Rainbow Operation Staff",
-    "Squad": "Not in a Squad",
+    "org": "Rainbow Operation Staff",
+    "squad": "Not in a squad",
     "release_year": "2024"
   },
   {
@@ -1009,8 +1009,8 @@
     ],
     "side": "Defence",
     "country": "Undefined",
-    "Org": "Rainbow Operation Staff",
-    "Squad": "Not in a Squad",
+    "org": "Rainbow Operation Staff",
+    "squad": "Not in a squad",
     "release_year": "2024"
   },
   {
@@ -1023,8 +1023,8 @@
     ],
     "side": "Defence",
     "country": "Greece",
-    "Org": "Ekam",
-    "Squad": "Wolfguard",
+    "org": "Ekam",
+    "squad": "Wolfguard",
     "release_year": "2024"
   }
 ]

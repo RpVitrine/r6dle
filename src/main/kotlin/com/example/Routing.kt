@@ -1,6 +1,7 @@
 package com.example
 
 import Operator
+import characters.OperatorValidator
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.http.content.*
@@ -10,34 +11,36 @@ import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.io.File
 import io.ktor.server.plugins.cors.routing.*
-
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import kotlin.reflect.typeOf
 
 val logger: Logger = LoggerFactory.getLogger("ValidateFieldsEndpoint")
-
-
 val operatorsList = mutableListOf<Operator>()
+val selectedOperators = mutableSetOf<String>() // Lista para armazenar operadores já escolhidos
 
+// Função para carregar operadores
 fun loadOperators() {
     val jsonFile = File("src/main/resources/characters/characters.json")
     if (jsonFile.exists()) {
         val jsonData = jsonFile.readText()
         operatorsList.addAll(Json.decodeFromString(jsonData))
     } else {
-        println("JSON file not found at path: src/main/resources/characters/characters.json")
+        logger.error("JSON file not found at path: src/main/resources/characters/characters.json")
     }
 }
 
+// Configuração de Roteamento e API
 fun Application.configureRouting() {
     loadOperators()
 
     install(CORS) {
-        anyHost()
+        allowHost("localhost:8080", schemes = listOf("http"))
+        allowHost("127.0.0.1:8080", schemes = listOf("http"))
+
         allowHeader(HttpHeaders.ContentType)
         allowHeader(HttpHeaders.Authorization)
         allowMethod(HttpMethod.Get)
+        allowMethod(HttpMethod.Post) // Se você estiver usando POST também
     }
 
     routing {
@@ -55,35 +58,31 @@ fun Application.configureRouting() {
         }
 
         get("/api/random-operator") {
+            // Verifica se o referer está presente e se é válido (localhost)
+            val referer = call.request.headers[HttpHeaders.Referrer]
+            if (referer == null || !referer.startsWith("http://localhost")) {
+                call.respond(HttpStatusCode.Forbidden, "{\"error\":\"Access denied. Invalid or missing Referer.\"}")
+                return@get
+            }
+
             if (operatorsList.isEmpty()) {
                 call.respond(HttpStatusCode.InternalServerError, "{\"error\":\"No operators available.\"}")
                 return@get
             }
 
             val randomOperator = operatorsList.random()
-            val jsonResponse = Json.encodeToString(randomOperator)
+            val jsonResponse = Json.encodeToString(randomOperator.name)
             call.respond(HttpStatusCode.OK, jsonResponse)
         }
-
-        get("/api/operador-name") {
-            val operatorName = call.request.queryParameters["name"]
-            if (operatorName.isNullOrBlank()) {
-                call.respond(HttpStatusCode.BadRequest, "{\"error\":\"Operator name is required.\"}")
-                return@get
-            }
-
-            val selectedOperator = operatorsList.find { it.name.equals(operatorName, ignoreCase = true) }
-            if (selectedOperator == null) {
-                call.respond(HttpStatusCode.NotFound, "{\"error\":\"Operator not found.\"}")
-                return@get
-            }
-
-            val jsonResponse = Json.encodeToString(selectedOperator)
-            call.respond(HttpStatusCode.OK, jsonResponse)
-        }
-
 
         get("/api/all-operator-name") {
+            // Verifica se o referer está presente e se é válido (localhost)
+            val referer = call.request.headers[HttpHeaders.Referrer]
+            if (referer == null || !referer.startsWith("http://localhost")) {
+                call.respond(HttpStatusCode.Forbidden, "{\"error\":\"Access denied. Invalid or missing Referer.\"}")
+                return@get
+            }
+
             val resourceBasePath = "/resources/"
             val operatorData = operatorsList.map { operator ->
                 mapOf(
@@ -94,56 +93,52 @@ fun Application.configureRouting() {
             val jsonResponse = Json.encodeToString(operatorData)
             call.respond(HttpStatusCode.OK, jsonResponse)
         }
+
+        get("/api/restart-game"){
+            // Verifica se o referer está presente e se é válido (localhost)
+            val referer = call.request.headers[HttpHeaders.Referrer]
+            if (referer == null || !referer.startsWith("http://localhost")) {
+                call.respond(HttpStatusCode.Forbidden, "{\"error\":\"Access denied. Invalid or missing Referer.\"}")
+                return@get
+            }
+
+            selectedOperators.clear()
+            call.respond(HttpStatusCode.OK, "{\"message\":\"Game restarted successfully.\"}")
+        }
+
         get("/api/validate-all-fields") {
+            // Verifica se o referer está presente e se é válido (localhost)
+            val referer = call.request.headers[HttpHeaders.Referrer]
+            if (referer == null || !referer.startsWith("http://localhost")) {
+                call.respond(HttpStatusCode.Forbidden, "{\"error\":\"Access denied. Invalid or missing Referer.\"}")
+                return@get
+            }
+
             val operatorChooseName = call.request.queryParameters["choose"]
+            val operatorRandomName = call.request.queryParameters["random"]
 
             logger.info("Received request with chosen operator: $operatorChooseName")
+            logger.info("Received request with random operator: $operatorRandomName")
 
-            if (operatorChooseName.isNullOrBlank()) {
-                logger.warn("Missing parameter: choose is null or blank")
-                call.respond(
-                    HttpStatusCode.BadRequest,
-                    mapOf("error" to "Chosen operator is required.")
-                )
+            // Verificar se o operador escolhido já foi selecionado
+            if (operatorChooseName != null && selectedOperators.contains(operatorChooseName)) {
+                call.respond(HttpStatusCode.BadRequest, "{\"error\":\"Operator has already been selected.\"}")
                 return@get
             }
 
-            val operatorChoose = operatorsList.find { it.name.equals(operatorChooseName, ignoreCase = true) }
-            if (operatorChoose == null) {
-                logger.warn("Operator not found: choose = $operatorChooseName")
-                call.respond(
-                    HttpStatusCode.NotFound,
-                    mapOf("error" to "Operator not found.")
-                )
-                return@get
+            // Adiciona o operador escolhido à lista de operadores selecionados
+            if (operatorChooseName != null) {
+                selectedOperators.add(operatorChooseName)
             }
 
-            // Passa por cada operador em operatorsList e realiza validações
-            val validationResults = operatorsList.map { operatorRandom ->
-                val results = mapOf(
-                    "name" to if (operatorRandom.name == operatorChoose.name) "green" else "red",
-                    "gender" to if (operatorRandom.gender == operatorChoose.gender) "green" else "red",
-                    "role" to if (operatorRandom.role == operatorChoose.role) "green" else "red",
-                    "side" to if (operatorRandom.side == operatorChoose.side) "green" else "red",
-                    "country" to if (operatorRandom.country == operatorChoose.country) "green" else "red",
-                    "Org" to if (operatorRandom.Org == operatorChoose.Org) "green" else "red",
-                    "Squad" to if (operatorRandom.Squad == operatorChoose.Squad) "green" else "red",
-                    "release_year" to if (operatorRandom.release_year == operatorChoose.release_year) "green" else "red"
-                )
-                mapOf(
-                    "randomOperator" to operatorRandom.name,
-                    "validation" to results
-                )
+            val validator = OperatorValidator()
+            val returnValue = validator.validateOperatorComparison(operatorChooseName, operatorRandomName)
+
+            if (returnValue.contains("error")) {
+                call.respond(HttpStatusCode.BadRequest, returnValue)
+            } else {
+                call.respond(HttpStatusCode.OK, returnValue)
             }
-
-            logger.info("Validation results for all operators: $validationResults")
-
-            val jsonResponse = mapOf(
-                "chosenOperator" to operatorChoose.name,
-                "validations" to validationResults
-            )
-
-            call.respond(HttpStatusCode.OK, jsonResponse)
         }
     }
 }

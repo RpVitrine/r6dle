@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,40 +8,39 @@
 </head>
 
 <body>
-<!-- Área do Header -->
-<div class="header">
+<!-- Cabeçalho -->
+<header class="header">
     <h1>Operator Quiz</h1>
     <div class="search-container">
         <input type="text" id="filter-input" placeholder="Search operators..." />
-        <button id="filter-btn" onclick="searchOperator()">Search</button>
+        <button id="filter-btn">Search</button>
     </div>
-</div>
+</header>
 
-<!-- Layout principal com duas seções: esquerda e direita -->
-<div class="main-container">
-    <!-- Seção lateral esquerda (lista de operadores) -->
+<!-- Layout principal -->
+<main class="main-container">
     <div class="left-panel">
         <ul id="filtered-list"></ul>
     </div>
 
-    <!-- Seção lateral direita (tabela principal) -->
     <div class="right-panel">
+        <div class="attempts-container">
+            <p id="attempts-counter">Attempts left: 7</p>
+        </div>
         <div class="table">
             <div class="cell">Name</div>
             <div class="cell">Gender</div>
-            <div class="cell">Role</div>
             <div class="cell">Side</div>
             <div class="cell">Country</div>
             <div class="cell">Org</div>
             <div class="cell">Squad</div>
             <div class="cell">Release Year</div>
+            <div class="cell">Role</div>
         </div>
 
-        <div class="table" id="operator-table">
-            <!-- Dados do operador serão exibidos aqui -->
-        </div>
+        <div class="table" id="operator-table"></div>
     </div>
-</div>
+</main>
 
 <!-- Rodapé -->
 <footer class="footer">
@@ -62,7 +60,15 @@
     </div>
 </footer>
 
+<!-- Modal -->
+<div id="success-modal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <h2 id="modal-title">Correct Operator!</h2>
+        <p id="modal-message">You selected the correct operator. Congratulations!</p>
+    </div>
+</div>
+
 <script src="index.js"></script>
 </body>
-
 </html>

@@ -8,7 +8,7 @@ data class Operator(
     val role: List<String>,
     val side: String,
     val country: String,
-    val Org: String,
-    val Squad: String,
+    val org: String,
+    val squad: String,
     val release_year: String
 )

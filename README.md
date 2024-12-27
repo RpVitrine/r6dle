@@ -33,7 +33,7 @@ e o frontend é uma aplicação web que consome a API do backend.
 
 3. Certifique-se de que as dependências do projeto estejam corretamente instaladas.
 
-4. Compile e execute o projeto no Ktor. O servidor backend estará disponível em `http://localhost:8080` ou `127.0.0.1:8080`.
+4. Compile e execute o projeto no Ktor. O servidor backend estará disponível em `http://localhost:8080` ou `http://127.0.0.1:8080`.
 
 ## Endpoints da API
 

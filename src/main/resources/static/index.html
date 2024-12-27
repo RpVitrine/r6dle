@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Quiz</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+<!-- Área do Header -->
+<div class="header">
+    <h1>Operator Quiz</h1>
+    <div class="search-container">
+        <input type="text" id="filter-input" placeholder="Search operators..." />
+        <button id="filter-btn" onclick="searchOperator()">Search</button>
+    </div>
+</div>
+
+<!-- Layout principal com duas seções: esquerda e direita -->
+<div class="main-container">
+    <!-- Seção lateral esquerda (lista de operadores) -->
+    <div class="left-panel">
+        <ul id="filtered-list"></ul>
+    </div>
+
+    <!-- Seção lateral direita (tabela principal) -->
+    <div class="right-panel">
+        <div class="table">
+            <div class="cell">Name</div>
+            <div class="cell">Gender</div>
+            <div class="cell">Role</div>
+            <div class="cell">Side</div>
+            <div class="cell">Country</div>
+            <div class="cell">Org</div>
+            <div class="cell">Squad</div>
+            <div class="cell">Release Year</div>
+        </div>
+
+        <div class="table" id="operator-table">
+            <!-- Dados do operador serão exibidos aqui -->
+        </div>
+    </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="footer">
+    <div class="legend">
+        <div class="legend-item">
+            <div class="indicator green"></div>
+            <span>Correct</span>
+        </div>
+        <div class="legend-item">
+            <div class="indicator yellow"></div>
+            <span>Partial</span>
+        </div>
+        <div class="legend-item">
+            <div class="indicator red"></div>
+            <span>Incorrect</span>
+        </div>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+
+</html>

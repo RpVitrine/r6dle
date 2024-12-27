@@ -1,0 +1,1030 @@
+[
+  {
+    "name": "Sledge",
+    "icon": "characters/icons/sledge.svg",
+    "gender": "Male",
+    "role": [
+      "Breach",
+      "Anti-Gadget"
+    ],
+    "side": "Attack",
+    "country": "Scotland",
+    "Org": "SAS",
+    "Squad": "Redhammer",
+    "release_year": "2015"
+  },
+  {
+    "name": "Thatcher",
+    "icon": "characters/icons/thatcher.svg",
+    "gender": "Male",
+    "role": [
+      "Support",
+      "Anti-Gadget"
+    ],
+    "side": "Attack",
+    "country": "England",
+    "Org": "SAS",
+    "Squad": "Viperstrike",
+    "release_year": "2015"
+  },
+  {
+    "name": "Ash",
+    "icon": "characters/icons/ash.svg",
+    "gender": "Female",
+    "role": [
+      "Breach",
+      "Front-Line"
+    ],
+    "side": "Attack",
+    "country": "Israel",
+    "Org": "FBI SWAT",
+    "Squad": "Redhammer",
+    "release_year": "2015"
+  },
+  {
+    "name": "Thermite",
+    "icon": "characters/icons/thermite.svg",
+    "gender": "Male",
+    "role": [
+      "Breach",
+      "Support"
+    ],
+    "side": "Attack",
+    "country": "USA",
+    "Org": "FBI SWAT",
+    "Squad": "Redhammer",
+    "release_year": "2015"
+  },
+  {
+    "name": "Twitch",
+    "icon": "characters/icons/twitch.svg",
+    "gender": "Female",
+    "role": [
+      "Anti-Gadget",
+      "Intel"
+    ],
+    "side": "Attack",
+    "country": "France",
+    "Org": "GIGN",
+    "Squad": "Wolfguard",
+    "release_year": "2015"
+  },
+  {
+    "name": "Montagne",
+    "icon": "characters/icons/montagne.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Support"
+    ],
+    "side": "Attack",
+    "country": "France",
+    "Org": "GIGN",
+    "Squad": "Wolfguard",
+    "release_year": "2015"
+  },
+  {
+    "name": "Glaz",
+    "icon": "characters/icons/glaz.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Support"
+    ],
+    "side": "Attack",
+    "country": "Russia",
+    "Org": "Spetsnaz",
+    "Squad": "Ghosteyes",
+    "release_year": "2015"
+  },
+  {
+    "name": "Fuze",
+    "icon": "characters/icons/fuze.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Gadget"
+    ],
+    "side": "Attack",
+    "country": "Uzbekistan",
+    "Org": "Spetsnaz",
+    "Squad": "Redhammer",
+    "release_year": "2015"
+  },
+  {
+    "name": "Blitz",
+    "icon": "characters/icons/blitz.svg",
+    "gender": "Male",
+    "role": [
+      "Front-Line",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "Germany",
+    "Org": "GSG 9",
+    "Squad": "Viperstrike",
+    "release_year": "2015"
+  },
+  {
+    "name": "IQ",
+    "icon": "characters/icons/iq.svg",
+    "gender": "Female",
+    "role": [
+      "Support",
+      "Intel"
+    ],
+    "side": "Attack",
+    "country": "Germany",
+    "Org": "GSG 9",
+    "Squad": "Nighthaven",
+    "release_year": "2015"
+  },
+  {
+    "name": "Buck",
+    "icon": "characters/icons/buck.svg",
+    "gender": "Male",
+    "role": [
+      "Support",
+      "Breach"
+    ],
+    "side": "Attack",
+    "country": "Canada",
+    "Org": "JTF2",
+    "Squad": "Redhammer",
+    "release_year": "2016"
+  },
+  {
+    "name": "Blackbeard",
+    "icon": "characters/icons/blackbeard.svg",
+    "gender": "Male",
+    "role": [
+      "Support"
+    ],
+    "side": "Attack",
+    "country": "USA",
+    "Org": "NAVY SEAL",
+    "Squad": "Redhammer",
+    "release_year": "2016"
+  },
+  {
+    "name": "Capitão",
+    "icon": "characters/icons/capitao.svg",
+    "gender": "Male",
+    "role": [
+      "Front-Line",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "Brazil",
+    "Org": "BOPE",
+    "Squad": "Viperstrike",
+    "release_year": "2016"
+  },
+  {
+    "name": "Hibana",
+    "icon": "characters/icons/hibana.svg",
+    "gender": "Female",
+    "role": [
+      "Breach",
+      "Front-Line"
+    ],
+    "side": "Attack",
+    "country": "Japan",
+    "Org": "SAT",
+    "Squad": "Viperstrike",
+    "release_year": "2016"
+  },
+  {
+    "name": "Jackal",
+    "icon": "characters/icons/jackal.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "Spain",
+    "Org": "GEO",
+    "Squad": "Viperstrike",
+    "release_year": "2017"
+  },
+  {
+    "name": "Ying",
+    "icon": "characters/icons/ying.svg",
+    "gender": "Female",
+    "role": [
+      "Front-Line",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "Hong Kong",
+    "Org": "SDU",
+    "Squad": "Wolfguard",
+    "release_year": "2017"
+  },
+  {
+    "name": "Zofia",
+    "icon": "characters/icons/zofia.svg",
+    "gender": "Female",
+    "role": [
+      "Breach",
+      "Anti-Gadget"
+    ],
+    "side": "Attack",
+    "country": "Poland",
+    "Org": "GROM",
+    "Squad": "Ghosteyes",
+    "release_year": "2017"
+  },
+  {
+    "name": "Dokkaebi",
+    "icon": "characters/icons/dokkaebi.svg",
+    "gender": "Female",
+    "role": [
+      "Intel",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "South Korea",
+    "Org": "707th SMB",
+    "Squad": "Viperstrike",
+    "release_year": "2017"
+  },
+  {
+    "name": "Lion",
+    "icon": "characters/icons/lion.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "France",
+    "Org": "GBRN Threat Unit",
+    "Squad": "Wolfguard",
+    "release_year": "2018"
+  },
+  {
+    "name": "Finka",
+    "icon": "characters/icons/finka.svg",
+    "gender": "Female",
+    "role": [
+      "Front-Line",
+      "Support"
+    ],
+    "side": "Attack",
+    "country": "Belarus",
+    "Org": "GBRN Threat Unit",
+    "Squad": "Nighthaven",
+    "release_year": "2018"
+  },
+  {
+    "name": "Maverick",
+    "icon": "characters/icons/maverick.svg",
+    "gender": "Male",
+    "role": [
+      "Front-Line",
+      "Breach"
+    ],
+    "side": "Attack",
+    "country": "USA",
+    "Org": "GSUTR",
+    "Squad": "Ghosteyes",
+    "release_year": "2018"
+  },
+  {
+    "name": "Nomad",
+    "icon": "characters/icons/nomad.svg",
+    "gender": "Female",
+    "role": [
+      "Front-Line",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "Morocco",
+    "Org": "GIGR",
+    "Squad": "Wolfguard",
+    "release_year": "2018"
+  },
+  {
+    "name": "Gridlock",
+    "icon": "characters/icons/gridlock.svg",
+    "gender": "Female",
+    "role": [
+      "Support",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "Australia",
+    "Org": "SASR",
+    "Squad": "Redhammer",
+    "release_year": "2019"
+  },
+  {
+    "name": "Nokk",
+    "icon": "characters/icons/nokk.svg",
+    "gender": "Female",
+    "role": [
+      "Front-Line",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "Redacted",
+    "Org": "Jaeger Corps",
+    "Squad": "Ghosteyes",
+    "release_year": "2019"
+  },
+  {
+    "name": "Amaru",
+    "icon": "characters/icons/amaru.svg",
+    "gender": "Female",
+    "role": [
+      "Front-Line",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "Peru",
+    "Org": "APCA",
+    "Squad": "Redhammer",
+    "release_year": "2019"
+  },
+  {
+    "name": "Kali",
+    "icon": "characters/icons/kali.svg",
+    "gender": "Female",
+    "role": [
+      "Anti-Gadget",
+      "Support"
+    ],
+    "side": "Attack",
+    "country": "India",
+    "Org": "Nighthaven",
+    "Squad": "Nighthaven",
+    "release_year": "2019"
+  },
+  {
+    "name": "Iana",
+    "icon": "characters/icons/iana.svg",
+    "gender": "Female",
+    "role": [
+      "Front-Line",
+      "Intel"
+    ],
+    "side": "Attack",
+    "country": "Netherlands",
+    "Org": "REU",
+    "Squad": "Ghosteyes",
+    "release_year": "2020"
+  },
+  {
+    "name": "Ace",
+    "icon": "characters/icons/ace.svg",
+    "gender": "Male",
+    "role": [
+      "Breach",
+      "Anti-Gadget"
+    ],
+    "side": "Attack",
+    "country": "Norway",
+    "Org": "Nighthaven",
+    "Squad": "Nighthaven",
+    "release_year": "2020"
+  },
+  {
+    "name": "Zero",
+    "icon": "characters/icons/zero.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Anti-Gadget"
+    ],
+    "side": "Attack",
+    "country": "USA",
+    "Org": "ROS",
+    "Squad": "Ghosteyes",
+    "release_year": "2020"
+  },
+  {
+    "name": "Flores",
+    "icon": "characters/icons/flores.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Anti-Gadget"
+    ],
+    "side": "Attack",
+    "country": "Argentina",
+    "Org": "Unaffiliated",
+    "Squad": "Ghosteyes",
+    "release_year": "2021"
+  },
+  {
+    "name": "Osa",
+    "icon": "characters/icons/osa.svg",
+    "gender": "Female",
+    "role": [
+      "Intel",
+      "Support"
+    ],
+    "side": "Attack",
+    "country": "Croatia",
+    "Org": "Nighthaven",
+    "Squad": "Nighthaven",
+    "release_year": "2021"
+  },
+  {
+    "name": "Sens",
+    "icon": "characters/icons/sens.svg",
+    "gender": "Undefined",
+    "role": [
+      "Map Control",
+      "Support"
+    ],
+    "side": "Attack",
+    "country": "Belgium",
+    "Org": "SFG",
+    "Squad": "Wolfguard",
+    "release_year": "2022"
+  },
+  {
+    "name": "Grim",
+    "icon": "characters/icons/grim.svg",
+    "gender": "Male",
+    "role": [
+      "Map Control",
+      "Front-Line"
+    ],
+    "side": "Attack",
+    "country": "Singapore",
+    "Org": "Nighthaven",
+    "Squad": "Nighthaven",
+    "release_year": "2022"
+  },
+  {
+    "name": "Brava",
+    "icon": "characters/icons/brava.svg",
+    "gender": "Female",
+    "role": [
+      "Anti-Gadget",
+      "Intel"
+    ],
+    "side": "Attack",
+    "country": "Brazil",
+    "Org": "COT",
+    "Squad": "Viperstrike",
+    "release_year": "2023"
+  },
+  {
+    "name": "Ram",
+    "icon": "characters/icons/ram.svg",
+    "gender": "Female",
+    "role": [
+      "Breach",
+      "Anti-Gadget"
+    ],
+    "side": "Attack",
+    "country": "South Korea",
+    "Org": "35TH Commando Battalion",
+    "Squad": "Redhammer",
+    "release_year": "2023"
+  },
+  {
+    "name": "Smoke",
+    "icon": "characters/icons/smoke.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Entry",
+      "Trapper"
+    ],
+    "side": "Defence",
+    "country": "England",
+    "Org": "SAS",
+    "Squad": "Nighthaven",
+    "release_year": "2015"
+  },
+  {
+    "name": "Mute",
+    "icon": "characters/icons/mute.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Gadget",
+      "Crowd Control"
+    ],
+    "side": "Defence",
+    "country": "England",
+    "Org": "SAS",
+    "Squad": "Viperstrike",
+    "release_year": "2015"
+  },
+  {
+    "name": "Castle",
+    "icon": "characters/icons/castle.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Entry",
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "USA",
+    "Org": "FBI SWAT",
+    "Squad": "Wolfguard",
+    "release_year": "2015"
+  },
+  {
+    "name": "Pulse",
+    "icon": "characters/icons/pulse.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "USA",
+    "Org": "FBI SWAT",
+    "Squad": "Nighthaven",
+    "release_year": "2015"
+  },
+  {
+    "name": "Doc",
+    "icon": "characters/icons/doc.svg",
+    "gender": "Male",
+    "role": [
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "France",
+    "Org": "GIGN",
+    "Squad": "Wolfguard",
+    "release_year": "2015"
+  },
+  {
+    "name": "Rook",
+    "icon": "characters/icons/rook.svg",
+    "gender": "Male",
+    "role": [
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "France",
+    "Org": "GIGN",
+    "Squad": "Viperstrike",
+    "release_year": "2015"
+  },
+  {
+    "name": "Kapkan",
+    "icon": "characters/icons/kapkan.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Entry",
+      "Trapper"
+    ],
+    "side": "Defence",
+    "country": "Russia",
+    "Org": "Spetsnaz",
+    "Squad": "Redhammer",
+    "release_year": "2015"
+  },
+  {
+    "name": "Tachanka",
+    "icon": "characters/icons/tachanka.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Entry",
+      "Crowd Control"
+    ],
+    "side": "Defence",
+    "country": "Russia",
+    "Org": "Spetsnaz",
+    "Squad": "Redhammer",
+    "release_year": "2015"
+  },
+  {
+    "name": "Jager",
+    "icon": "characters/icons/jager.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Gadget",
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "Germany",
+    "Org": "GSG 9",
+    "Squad": "Viperstrike",
+    "release_year": "2015"
+  },
+  {
+    "name": "Bandit",
+    "icon": "characters/icons/bandit.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Gadget",
+      "Anti-Entry"
+    ],
+    "side": "Defence",
+    "country": "Germany",
+    "Org": "GSG 9",
+    "Squad": "Wolfguard",
+    "release_year": "2015"
+  },
+  {
+    "name": "Frost",
+    "icon": "characters/icons/frost.svg",
+    "gender": "Female",
+    "role": [
+      "Trapper",
+      "Anti-Entry"
+    ],
+    "side": "Defence",
+    "country": "Canada",
+    "Org": "JTF2",
+    "Squad": "Wolfguard",
+    "release_year": "2016"
+  },
+  {
+    "name": "Valkyrie",
+    "icon": "characters/icons/valkyrie.svg",
+    "gender": "Female",
+    "role": [
+      "Intel",
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "USA",
+    "Org": "NAVY SEAL",
+    "Squad": "Ghosteyes",
+    "release_year": "2016"
+  },
+  {
+    "name": "Caveira",
+    "icon": "characters/icons/caveira.svg",
+    "gender": "Female",
+    "role": [
+      "Intel",
+      "Crowd Control"
+    ],
+    "side": "Defence",
+    "country": "Brazil",
+    "Org": "BOPE",
+    "Squad": "Ghosteyes",
+    "release_year": "2016"
+  },
+  {
+    "name": "Echo",
+    "icon": "characters/icons/echo.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Crowd Control"
+    ],
+    "side": "Defence",
+    "country": "Japan",
+    "Org": "SAT",
+    "Squad": "Viperstrike",
+    "release_year": "2016"
+  },
+  {
+    "name": "Mira",
+    "icon": "characters/icons/mira.svg",
+    "gender": "Female",
+    "role": [
+      "Intel",
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "Spain",
+    "Org": "GEO",
+    "Squad": "Viperstrike",
+    "release_year": "2017"
+  },
+  {
+    "name": "Lesion",
+    "icon": "characters/icons/lesion.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Entry",
+      "Trapper"
+    ],
+    "side": "Defence",
+    "country": "Hong Kong",
+    "Org": "SDU",
+    "Squad": "Ghosteyes",
+    "release_year": "2017"
+  },
+  {
+    "name": "Ela",
+    "icon": "characters/icons/ela.svg",
+    "gender": "Female",
+    "role": [
+      "Crowd Control",
+      "Trapper"
+    ],
+    "side": "Defence",
+    "country": "Poland",
+    "Org": "GROM",
+    "Squad": "Nighthaven",
+    "release_year": "2017"
+  },
+  {
+    "name": "Vigil",
+    "icon": "characters/icons/vigil.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Gadget",
+      "Crowd Control"
+    ],
+    "side": "Defence",
+    "country": "Redacted",
+    "Org": "707th SMB",
+    "Squad": "Ghosteyes",
+    "release_year": "2017"
+  },
+  {
+    "name": "Maestro",
+    "icon": "characters/icons/maestro.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Gadget",
+      "Intel"
+    ],
+    "side": "Defence",
+    "country": "Italy",
+    "Org": "GIS",
+    "Squad": "Viperstrike",
+    "release_year": "2018"
+  },
+  {
+    "name": "Alibi",
+    "icon": "characters/icons/alibi.svg",
+    "gender": "Female",
+    "role": [
+      "Trapper",
+      "Intel"
+    ],
+    "side": "Defence",
+    "country": "Libya",
+    "Org": "GIS",
+    "Squad": "Viperstrike",
+    "release_year": "2018"
+  },
+  {
+    "name": "Clash",
+    "icon": "characters/icons/clash.svg",
+    "gender": "Female",
+    "role": [
+      "Crowd Control",
+      "Intel"
+    ],
+    "side": "Defence",
+    "country": "England",
+    "Org": "GSUTR",
+    "Squad": "Wolfguard",
+    "release_year": "2018"
+  },
+  {
+    "name": "Kaid",
+    "icon": "characters/icons/kaid.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Entry",
+      "Anti-Gadget"
+    ],
+    "side": "Defence",
+    "country": "Morocco",
+    "Org": "GIGR",
+    "Squad": "Redhammer",
+    "release_year": "2018"
+  },
+  {
+    "name": "Mozzie",
+    "icon": "characters/icons/mozzie.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Anti-Gadget"
+    ],
+    "side": "Defence",
+    "country": "Australia",
+    "Org": "SASR",
+    "Squad": "Ghosteyes",
+    "release_year": "2019"
+  },
+  {
+    "name": "Warden",
+    "icon": "characters/icons/warden.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Anti-Gadget"
+    ],
+    "side": "Defence",
+    "country": "USA",
+    "Org": "Secret Service",
+    "Squad": "Ghosteyes",
+    "release_year": "2019"
+  },
+  {
+    "name": "Goyo",
+    "icon": "characters/icons/goyo.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Entry",
+      "Trapper"
+    ],
+    "side": "Defence",
+    "country": "Mexico",
+    "Org": "Fuerzas Especiales",
+    "Squad": "Redhammer",
+    "release_year": "2019"
+  },
+  {
+    "name": "Wamai",
+    "icon": "characters/icons/wamai.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Gadget",
+      "Trapper"
+    ],
+    "side": "Defence",
+    "country": "Kenya",
+    "Org": "Nighthaven",
+    "Squad": "Nighthaven",
+    "release_year": "2019"
+  },
+  {
+    "name": "Oryx",
+    "icon": "characters/icons/oryx.svg",
+    "gender": "Male",
+    "role": [
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "Jordan",
+    "Org": "Unaffiliated",
+    "Squad": "Redhammer",
+    "release_year": "2020"
+  },
+  {
+    "name": "Melusi",
+    "icon": "characters/icons/melusi.svg",
+    "gender": "Female",
+    "role": [
+      "Intel",
+      "Crowd Control"
+    ],
+    "side": "Defence",
+    "country": "South Africa",
+    "Org": "Inkaba Task Force",
+    "Squad": "Wolfguard",
+    "release_year": "2020"
+  },
+  {
+    "name": "Aruni",
+    "icon": "characters/icons/aruni.svg",
+    "gender": "Female",
+    "role": [
+      "Anti-Entry",
+      "Anti-Gadget"
+    ],
+    "side": "Defence",
+    "country": "Thailand",
+    "Org": "Nighthaven",
+    "Squad": "Nighthaven",
+    "release_year": "2020"
+  },
+  {
+    "name": "Thunderbird",
+    "icon": "characters/icons/thunderbird.svg",
+    "gender": "Female",
+    "role": [
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "Canada",
+    "Org": "Star-Net Aviation",
+    "Squad": "Wolfguard",
+    "release_year": "2021"
+  },
+  {
+    "name": "Thorn",
+    "icon": "characters/icons/thorn.svg",
+    "gender": "Female",
+    "role": [
+      "Anti-Entry",
+      "Trapper"
+    ],
+    "side": "Defence",
+    "country": "Ireland",
+    "Org": "Emergancy Response Unit",
+    "Squad": "Redhammer",
+    "release_year": "2021"
+  },
+  {
+    "name": "Azami",
+    "icon": "characters/icons/azami.svg",
+    "gender": "Female",
+    "role": [
+      "Anti-Entry",
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "Japan",
+    "Org": "Unaffiliated",
+    "Squad": "Viperstrike",
+    "release_year": "2022"
+  },
+  {
+    "name": "Solis",
+    "icon": "characters/icons/solis.svg",
+    "gender": "Female",
+    "role": [
+      "Intel",
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "Colombia",
+    "Org": "AFEAU",
+    "Squad": "Ghosteyes",
+    "release_year": "2022"
+  },
+  {
+    "name": "Fenrir",
+    "icon": "characters/icons/fenrir.svg",
+    "gender": "Male",
+    "role": [
+      "Crowd Control",
+      "Trapper"
+    ],
+    "side": "Defence",
+    "country": "Sweden",
+    "Org": "Unaffiliated",
+    "Squad": "Redhammer",
+    "release_year": "2023"
+  },
+  {
+    "name": "Tubarão",
+    "icon": "characters/icons/tubarao.svg",
+    "gender": "Male",
+    "role": [
+      "Anti-Gadget",
+      "Crowd Control"
+    ],
+    "side": "Defence",
+    "country": "Portugal",
+    "Org": "DAE",
+    "Squad": "Wolfguard",
+    "release_year": "2023"
+  },
+  {
+    "name": "Deimos",
+    "icon": "characters/icons/deimos.svg",
+    "gender": "Male",
+    "role": [
+      "Intel",
+      "Map Control"
+    ],
+    "side": "Attack",
+    "country": "USA",
+    "Org": "Keres Legion",
+    "Squad": "Not in a Squad",
+    "release_year": "2024"
+  },
+  {
+    "name": "Striker",
+    "icon": "characters/icons/striker.svg",
+    "gender": "Undefined",
+    "role": [
+      "Support"
+    ],
+    "side": "Attack",
+    "country": "Undefined",
+    "Org": "Rainbow Operation Staff",
+    "Squad": "Not in a Squad",
+    "release_year": "2024"
+  },
+  {
+    "name": "Sentry",
+    "icon": "characters/icons/sentry.svg",
+    "gender": "Undefined",
+    "role": [
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "Undefined",
+    "Org": "Rainbow Operation Staff",
+    "Squad": "Not in a Squad",
+    "release_year": "2024"
+  },
+  {
+    "name": "Skopós",
+    "icon": "characters/icons/skopos.svg",
+    "gender": "Female",
+    "role": [
+      "Intel",
+      "Support"
+    ],
+    "side": "Defence",
+    "country": "Greece",
+    "Org": "Ekam",
+    "Squad": "Wolfguard",
+    "release_year": "2024"
+  }
+]

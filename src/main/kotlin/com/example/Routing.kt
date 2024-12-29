@@ -2,6 +2,7 @@ package com.example
 
 import Operator
 import characters.OperatorValidator
+import Utils.Encrypt
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.http.content.*
@@ -72,7 +73,9 @@ fun Application.configureRouting() {
             }
 
             val randomOperator = operatorsList.random()
-            val jsonResponse = Json.encodeToString(randomOperator.name)
+            val encryptor = Encrypt()
+            val encryptedName = encryptor.encrypt(randomOperator.name)
+            val jsonResponse = Json.encodeToString(encryptedName)
             call.respond(HttpStatusCode.OK, jsonResponse)
         }
 
@@ -135,8 +138,11 @@ fun Application.configureRouting() {
                 selectedOperators.add(operatorChooseName)
             }
 
+            val deencryptor = Encrypt()
+            val deencryptedName = deencryptor.decrypt(operatorRandomName.toString())
+
             val validator = OperatorValidator()
-            val returnValue = validator.validateOperatorComparison(operatorChooseName, operatorRandomName)
+            val returnValue = validator.validateOperatorComparison(operatorChooseName, deencryptedName)
 
             if (returnValue.contains("error")) {
                 call.respond(HttpStatusCode.BadRequest, returnValue)
@@ -144,5 +150,31 @@ fun Application.configureRouting() {
                 call.respond(HttpStatusCode.OK, returnValue)
             }
         }
+
+        get("/api/decrypt-operator") {
+            // Verifica se o referer está presente e se é válido (localhost)
+            val referer = call.request.headers[HttpHeaders.Referrer]
+            if (referer == null ||
+                !(referer.startsWith("http://localhost") || referer.startsWith("http://127.0.0.1"))) {
+                call.respond(HttpStatusCode.Forbidden, "{\"error\":\"Access denied. Invalid or missing Referer.\"}")
+                return@get
+            }
+
+            val encryptedName = call.request.queryParameters["name"]
+            if (encryptedName == null) {
+                call.respond(HttpStatusCode.BadRequest, "{\"error\":\"Missing encrypted name.\"}")
+                return@get
+            }
+
+            try {
+                val deencryptor = Encrypt()
+                val decryptedName = deencryptor.decrypt(encryptedName)
+                call.respond(HttpStatusCode.OK, Json.encodeToString(mapOf("decryptedName" to decryptedName)))
+            } catch (e: Exception) {
+                logger.error("Error decrypting operator name: ${e.message}")
+                call.respond(HttpStatusCode.InternalServerError, "{\"error\":\"Failed to decrypt operator name.\"}")
+            }
+        }
+
     }
 }

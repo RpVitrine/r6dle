@@ -94,8 +94,22 @@ function updateAttemptsCounter() {
     attemptsCounter.textContent = `Tentativas restantes: ${attemptsLeft}`;
 }
 
-// Exibe o modal de sucesso ou falha
-function showModal(isCorrect, gameOver = false, correctAnswer = "") {
+// Obtém o nome do operador desencriptado
+async function fetchDecryptedOperator(encryptedName) {
+    try {
+        const response = await fetch(`http://localhost:8080/api/decrypt-operator?name=${encodeURIComponent(encryptedName)}`);
+        if (!response.ok) throw new Error(`Erro ao desencriptar nome: ${response.status}`);
+
+        const result = await response.json();
+        return result.decryptedName;
+    } catch (error) {
+        console.error('Erro ao desencriptar operador:', error);
+        return null;
+    }
+}
+
+// Exibe o modal com o nome desencriptado
+async function showModal(isCorrect, gameOver = false, encryptedAnswer = "") {
     const modal = document.getElementById('success-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalMessage = document.getElementById('modal-message');
@@ -104,14 +118,16 @@ function showModal(isCorrect, gameOver = false, correctAnswer = "") {
         modalTitle.textContent = "Operador Correto!";
         modalMessage.textContent = "Você escolheu o operador correto. Parabéns!";
     } else {
-        if (gameOver) {
+        if (gameOver && encryptedAnswer) {
+            const decryptedName = await fetchDecryptedOperator(encryptedAnswer);
             modalTitle.textContent = "Game Over!";
-            modalMessage.textContent = `Você errou! O operador correto era: ${correctAnswer}.`;
+            modalMessage.textContent = `Você errou! O operador correto era: ${decryptedName || "desconhecido"}.`;
         }
     }
 
     modal.style.display = "flex"; // Exibe o modal
 }
+
 
 // Fecha o modal e reinicia o jogo
 function closeModal() {

@@ -50,10 +50,11 @@ fun Application.configureRouting() {
             defaultResource("index.html", "static")
         }
 
-        get("/") {
-            call.respondFile(File("src/main/resources/static/index.html"))
-        }
+//        get("/") {
+//            call.respondFile(File("src/main/resources/static/index.html"))
+//        }
 
+        // Carrega a pasta resources para o url "/"
         static("/resources") {
             resources("/")
         }
@@ -169,7 +170,7 @@ fun Application.configureRouting() {
             try {
                 val deencryptor = Encrypt()
                 val decryptedName = deencryptor.decrypt(encryptedName)
-                call.respond(HttpStatusCode.OK, Json.encodeToString(mapOf("decryptedName" to decryptedName)))
+                call.respond(HttpStatusCode.OK, decryptedName)
             } catch (e: Exception) {
                 logger.error("Error decrypting operator name: ${e.message}")
                 call.respond(HttpStatusCode.InternalServerError, "{\"error\":\"Failed to decrypt operator name.\"}")

@@ -103,6 +103,16 @@ body {
     font-weight: 600;
 }
 
+.streak-container {
+    margin-bottom: 20px;
+}
+
+#streak-counter {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffc107; /* Cor amarela para destaque */
+}
+
 /* Tabela */
 .table {
     display: grid;

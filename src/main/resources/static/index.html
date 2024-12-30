@@ -27,6 +27,9 @@
         <div class="attempts-container">
             <p id="attempts-counter">Attempts left: 7</p>
         </div>
+        <div class="streak-container">
+            <p id="streak-counter">Streak: 0</p>
+        </div>
         <div class="table">
             <div class="cell">Name</div>
             <div class="cell">Gender</div>
@@ -63,7 +66,7 @@
 <!-- Modal -->
 <div id="success-modal" class="modal">
     <div class="modal-content">
-        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <button id="close-modal-btn" class="close-btn">&times;</button>
         <h2 id="modal-title">Correct Operator!</h2>
         <p id="modal-message">You selected the correct operator. Congratulations!</p>
     </div>

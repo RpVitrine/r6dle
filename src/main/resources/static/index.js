@@ -1,170 +1,194 @@
-let attemptsLeft = 7; // Número de tentativas restantes
+(() => {
+    let attemptsLeft = 7; // Número de tentativas restantes
+    let streak = 0;
 
-// Obtém um operador aleatório da API
-async function fetchRandomOperator() {
-    try {
-        const response = await fetch('http://localhost:8080/api/random-operator');
-        if (!response.ok) throw new Error(`Erro ao buscar operador aleatório: ${response.status}`);
+    const API_BASE_URL = 'http://localhost:8080/api';
+    const DEFAULT_ICON = 'default-image.png';
 
-        const operator = await response.json();
-        localStorage.setItem('randomOperator', JSON.stringify(operator));
-    } catch (error) {
-        console.error('Erro ao buscar operador aleatório:', error);
-    }
-}
+    // Busca um operador aleatório e salva no localStorage
+    async function fetchRandomOperator() {
+        try {
+            const response = await fetch(`${API_BASE_URL}/random-operator`);
+            if (!response.ok) throw new Error(`Erro ao buscar operador aleatório: ${response.status}`);
 
-// Busca todos os nomes de operadores e inicializa o filtro
-async function fetchOperatorNames() {
-    try {
-        const response = await fetch('http://localhost:8080/api/all-operator-name');
-        if (!response.ok) throw new Error(`Erro ao buscar nomes de operadores: ${response.status}`);
-
-        const operators = await response.json();
-        setupFilter(operators);
-    } catch (error) {
-        console.error('Erro ao buscar nomes de operadores:', error);
-    }
-}
-
-// Configura o filtro de operadores
-function setupFilter(operators) {
-    const input = document.getElementById('filter-input');
-    const list = document.getElementById('filtered-list');
-
-    const updateList = (data) => {
-        list.innerHTML = data
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map(op => `
-                <li onclick="setInputText('${op.name}')">
-                    <div class="operator-icon" style="background-image: url('${op.icon || 'default-image.png'}');"></div>
-                    <span class="operator-name">${op.name}</span>
-                </li>`).join('');
-    };
-
-    input.addEventListener('input', () => {
-        const filter = input.value.toLowerCase();
-        updateList(operators.filter(op => op.name.toLowerCase().includes(filter)));
-    });
-
-    updateList(operators);
-}
-
-// Valida os operadores escolhidos
-async function validateOperatorFields() {
-    try {
-        const randomOperator = JSON.parse(localStorage.getItem('randomOperator'));
-        const chosenOperatorName = document.getElementById('filter-input').value.trim();
-
-        if (!randomOperator || !chosenOperatorName) {
-            alert("Por favor, escolha um operador.");
-            return;
+            const operator = await response.json();
+            localStorage.setItem('randomOperator', JSON.stringify(operator));
+        } catch (error) {
+            console.error('Erro ao buscar operador aleatório:', error);
         }
+    }
 
-        const response = await fetch(`http://localhost:8080/api/validate-all-fields?random=${encodeURIComponent(randomOperator)}&choose=${encodeURIComponent(chosenOperatorName)}`);
-        if (!response.ok) throw new Error(`Erro ao validar operadores: ${response.status}`);
+    // Busca todos os nomes de operadores
+    async function fetchOperatorNames() {
+        try {
+            const response = await fetch(`${API_BASE_URL}/all-operator-name`);
+            if (!response.ok) throw new Error(`Erro ao buscar nomes de operadores: ${response.status}`);
 
-        const responseText = await response.text();
-        document.getElementById('operator-table').innerHTML += responseText;
+            const operators = await response.json();
+            setupFilter(operators);
+        } catch (error) {
+            console.error('Erro ao buscar nomes de operadores:', error);
+        }
+    }
 
-        // Compara a resposta do usuário com o operador correto
-        if (chosenOperatorName === randomOperator) {
-            showModal(true); // Chama o modal de sucesso
-        } else {
-            attemptsLeft--;
-            updateAttemptsCounter(); // Atualiza o contador de tentativas
-            if (attemptsLeft == 0) {
-                showModal(false, true, randomOperator); // Mostra o operador correto após 7 tentativas erradas
+    // Configura o filtro de operadores
+    function setupFilter(operators) {
+        const input = document.getElementById('filter-input');
+        const list = document.getElementById('filtered-list');
+
+        const updateList = (filteredOperators) => {
+            list.innerHTML = filteredOperators
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map(op => `
+                    <li onclick="setInputText('${op.name}')">
+                        <div class="operator-icon" style="background-image: url('${op.icon || DEFAULT_ICON}');"></div>
+                        <span class="operator-name">${op.name}</span>
+                    </li>`).join('');
+        };
+
+        input.addEventListener('input', () => {
+            const filter = input.value.trim().toLowerCase();
+            updateList(operators.filter(op => op.name.toLowerCase().includes(filter)));
+        });
+
+        updateList(operators);
+    }
+
+    // Valida os operadores escolhidos
+    async function validateOperatorFields() {
+        try {
+            const randomOperator = JSON.parse(localStorage.getItem('randomOperator'));
+            const chosenOperatorName = document.getElementById('filter-input').value.trim();
+
+            if (!randomOperator || !chosenOperatorName) {
+                alert("Por favor, escolha um operador.");
+                return;
             }
+
+            const validateResponse = await fetch(`${API_BASE_URL}/validate-all-fields?random=${encodeURIComponent(randomOperator)}&choose=${encodeURIComponent(chosenOperatorName)}`);
+            if (!validateResponse.ok) throw new Error(`Erro ao validar operadores: ${validateResponse.status}`);
+
+            const responseText = await validateResponse.text();
+            document.getElementById('operator-table').innerHTML += responseText;
+
+            const decryptedOperator = await fetchDecryptedOperator(randomOperator);
+            if (!decryptedOperator) return;
+
+            if (chosenOperatorName.toLowerCase() === decryptedOperator.toLowerCase()) {
+                showModal(true); // Chama o modal de sucesso
+            } else {
+                handleIncorrectAttempt(randomOperator);
+            }
+
+            document.getElementById('filter-input').value = ""; // Limpa o campo
+            fetchOperatorNames(); // Atualiza a lista
+        } catch (error) {
+            console.error('Erro ao validar operadores:', error);
         }
-
-        // Limpa o campo de entrada
-        document.getElementById('filter-input').value = "";
-
-        // Recarrega todos os operadores na lista após a validação
-        fetchOperatorNames();
-    } catch (error) {
-        console.error('Erro ao validar operadores:', error);
-//        alert("Ocorreu um erro. Tente novamente.");
     }
-}
 
-// Atualiza o contador de tentativas
-function updateAttemptsCounter() {
-    const attemptsCounter = document.getElementById('attempts-counter');
-    attemptsCounter.textContent = `Tentativas restantes: ${attemptsLeft}`;
-}
+    // Busca o nome desencriptado do operador
+    async function fetchDecryptedOperator(encryptedName) {
+        try {
+            const response = await fetch(`${API_BASE_URL}/decrypt-operator?name=${encodeURIComponent(encryptedName)}`);
+            if (!response.ok) throw new Error(`Erro ao desencriptar operador: ${response.status}`);
 
-// Obtém o nome do operador desencriptado
-async function fetchDecryptedOperator(encryptedName) {
-    try {
-        const response = await fetch(`http://localhost:8080/api/decrypt-operator?name=${encodeURIComponent(encryptedName)}`);
-        if (!response.ok) throw new Error(`Erro ao desencriptar nome: ${response.status}`);
-
-        const result = await response.json();
-        return result.decryptedName;
-    } catch (error) {
-        console.error('Erro ao desencriptar operador:', error);
-        return null;
+            return (await response.text()).trim();
+        } catch (error) {
+            console.error('Erro ao desencriptar operador:', error);
+            return null;
+        }
     }
-}
 
-// Exibe o modal com o nome desencriptado
-async function showModal(isCorrect, gameOver = false, encryptedAnswer = "") {
-    const modal = document.getElementById('success-modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalMessage = document.getElementById('modal-message');
+    function updateStreak() {
+        const streakCounter = document.getElementById('streak-counter');
+        streakCounter.textContent = `Streak: ${streak}`;
+    }
 
-    if (isCorrect) {
-        modalTitle.textContent = "Operador Correto!";
-        modalMessage.textContent = "Você escolheu o operador correto. Parabéns!";
-    } else {
-        if (gameOver && encryptedAnswer) {
+    // Lida com tentativas incorretas
+    function handleIncorrectAttempt(randomOperator) {
+        attemptsLeft--;
+        updateAttemptsCounter();
+
+        if (attemptsLeft === 0) {
+            showModal(false, true, randomOperator);
+        }
+    }
+
+    // Atualiza o contador de tentativas
+    function updateAttemptsCounter() {
+        const attemptsCounter = document.getElementById('attempts-counter');
+        attemptsCounter.textContent = `Tentativas restantes: ${attemptsLeft}`;
+    }
+
+    // Exibe o modal de resultado
+    async function showModal(isCorrect, gameOver = false, encryptedAnswer = "") {
+        const modal = document.getElementById('success-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+
+        if (isCorrect) {
+            modalTitle.textContent = "Operador Correto!";
+            modalMessage.textContent = "Você escolheu o operador correto. Parabéns!";
+            streak++;
+            updateStreak();
+        } else if (gameOver && encryptedAnswer) {
             const decryptedName = await fetchDecryptedOperator(encryptedAnswer);
             modalTitle.textContent = "Game Over!";
             modalMessage.textContent = `Você errou! O operador correto era: ${decryptedName || "desconhecido"}.`;
+            streak = 0;
+            updateStreak();
         }
+
+        modal.style.display = "flex"; // Exibe o modal
     }
 
-    modal.style.display = "flex"; // Exibe o modal
-}
+    // Fecha o modal e reinicia o jogo
+    function closeModal() {
+        const modal = document.getElementById('success-modal');
+        modal.style.display = "none";
 
+        fetch(`${API_BASE_URL}/restart-game`)
 
-// Fecha o modal e reinicia o jogo
-function closeModal() {
-    const modal = document.getElementById('success-modal');
-    modal.style.display = "none";
+        localStorage.clear();
+        attemptsLeft = 7;
+        updateAttemptsCounter();
+        document.getElementById('operator-table').innerHTML = "";
 
-    fetch('http://localhost:8080/api/restart-game');
+        fetchRandomOperator();
+        fetchOperatorNames();
+    }
 
-    localStorage.clear();
+    // Define o texto no campo de entrada
+    window.setInputText = function (name) {
+        document.getElementById('filter-input').value = name;
+    };
 
-    // Reinicia as tentativas e a tabela
-    attemptsLeft = 7;
-    updateAttemptsCounter(); // Atualiza o contador de tentativas
+//    function hasPageRefreshed() {
+//        return performance.navigation.type === 1; // 1 significa recarregamento
+//    }
 
-    // Limpa a tabela de operadores escolhidos
-    document.getElementById('operator-table').innerHTML = "";
+    // Inicializa a aplicação
+    function initialize() {
+        localStorage.clear();
+//        if (hasPageRefreshed()) {
+//            console.log("A página foi recarregada!");
+//            localStorage.clear();
+//            attemptsLeft = 7;
+//            updateAttemptsCounter();
+//            document.getElementById('operator-table').innerHTML = "";
+//        }
 
-    // Reinicia o jogo
-    fetchRandomOperator();
-    fetchOperatorNames();
+        if (!localStorage.getItem('randomOperator'))
+            {fetchRandomOperator();}
+        fetchOperatorNames();
 
-    document.getElementById('filter-input').value = ""
-}
+        updateStreak();
 
-// Define o texto no campo de entrada
-function setInputText(name) {
-    document.getElementById('filter-input').value = name;
-}
+        document.getElementById('filter-btn').addEventListener('click', validateOperatorFields);
+        document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+        updateAttemptsCounter();
+    }
 
-// Inicializa a aplicação ao carregar a página
-function initialize() {
-    if (!localStorage.getItem('randomOperator')) fetchRandomOperator();
-    fetchOperatorNames();
-
-    // Adiciona evento de clique no botão de busca
-    document.getElementById('filter-btn').addEventListener('click', validateOperatorFields);
-    document.getElementById('filter-input').value = "";
-}
-
-document.addEventListener('DOMContentLoaded', initialize);
+    document.addEventListener('DOMContentLoaded', initialize);
+})();

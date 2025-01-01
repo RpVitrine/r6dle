@@ -13,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    max-height: 100vh;
     justify-content: space-between;
 }
 
@@ -23,6 +24,7 @@ body {
     color: #fff;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     border-bottom: 3px solid #444;
+    height: 21vh
 }
 
 .header h1 {
@@ -81,7 +83,7 @@ body {
     background-color: #333;
     padding: 15px;
     border-radius: 8px;
-    height: 80vh;
+    height: 72vh;
     overflow-y: auto;
 }
 
@@ -90,7 +92,7 @@ body {
     background-color: #3e4b59;
     padding: 15px;
     border-radius: 8px;
-    height: 80vh;
+    height: 72vh;
     overflow-y: auto;
 }
 
@@ -154,10 +156,8 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #777;
-    margin-right: 12px;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
 }
 
 .operator-name {
@@ -175,6 +175,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
+    height: 5vh;
 }
 
 .footer .legend {

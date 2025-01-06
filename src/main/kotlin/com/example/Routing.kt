@@ -152,7 +152,7 @@ fun Application.configureRouting() {
             }
         }
 
-        get("/api/decrypt-operator") {
+        get("/api/validate-operator") {
             // Verifica se o referer está presente e se é válido (localhost)
             val referer = call.request.headers[HttpHeaders.Referrer]
             if (referer == null ||
@@ -161,7 +161,8 @@ fun Application.configureRouting() {
                 return@get
             }
 
-            val encryptedName = call.request.queryParameters["name"]
+            val chosseName = call.request.queryParameters["chosse"]
+            val encryptedName = call.request.queryParameters["random"]
             if (encryptedName == null) {
                 call.respond(HttpStatusCode.BadRequest, "{\"error\":\"Missing encrypted name.\"}")
                 return@get
@@ -170,7 +171,13 @@ fun Application.configureRouting() {
             try {
                 val deencryptor = Encrypt()
                 val decryptedName = deencryptor.decrypt(encryptedName)
-                call.respond(HttpStatusCode.OK, decryptedName)
+
+                if (decryptedName.lowercase() == chosseName?.lowercase()){
+                    call.respond(HttpStatusCode.OK, "true");
+                }else{
+                    call.respond(HttpStatusCode.OK, "false");
+                }
+
             } catch (e: Exception) {
                 logger.error("Error decrypting operator name: ${e.message}")
                 call.respond(HttpStatusCode.InternalServerError, "{\"error\":\"Failed to decrypt operator name.\"}")

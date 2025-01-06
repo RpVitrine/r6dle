@@ -71,10 +71,10 @@
             const responseText = await validateResponse.text();
             document.getElementById('operator-table').innerHTML += responseText;
 
-            const decryptedOperator = await fetchDecryptedOperator(randomOperator);
-            if (!decryptedOperator) return;
+            const isCorrect = await ValidateOperatorCorrect(chosenOperatorName.toLowerCase(), randomOperator);
+            if (!isCorrect) return;
 
-            if (chosenOperatorName.toLowerCase() === decryptedOperator.toLowerCase()) {
+            if (isCorrect == "true") {
                 showModal(true); // Chama o modal de sucesso
             } else {
                 handleIncorrectAttempt(randomOperator);
@@ -88,9 +88,10 @@
     }
 
     // Busca o nome desencriptado do operador
-    async function fetchDecryptedOperator(encryptedName) {
+    async function ValidateOperatorCorrect(chosseName, randomOperator) {
         try {
-            const response = await fetch(`${API_BASE_URL}/decrypt-operator?name=${encodeURIComponent(encryptedName)}`);
+            const response = await
+                fetch(`${API_BASE_URL}/validate-operator?chosse=${encodeURIComponent(chosseName)}&&random=${encodeURIComponent(randomOperator)}`);
             if (!response.ok) throw new Error(`Erro ao desencriptar operador: ${response.status}`);
 
             return (await response.text()).trim();
@@ -171,6 +172,8 @@
     // Inicializa a aplicação
     function initialize() {
         localStorage.clear();
+        fetch(`${API_BASE_URL}/restart-game`)
+
 //        if (hasPageRefreshed()) {
 //            console.log("A página foi recarregada!");
 //            localStorage.clear();
